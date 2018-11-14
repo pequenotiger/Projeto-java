@@ -41,14 +41,15 @@ public class frmMenu extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jmArquivo = new javax.swing.JMenu();
         jmiSair = new javax.swing.JMenuItem();
-        jmConsultar = new javax.swing.JMenu();
-        jmiConsultaUsuario = new javax.swing.JMenuItem();
-        Produto = new javax.swing.JMenuItem();
+        jMenu5 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jmiCadUsuario = new javax.swing.JMenuItem();
         jmiCadCliente = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jmRelatorios = new javax.swing.JMenu();
+        jmConsultar = new javax.swing.JMenu();
+        jmiConsultaUsuario = new javax.swing.JMenuItem();
+        Produto = new javax.swing.JMenuItem();
         jmAjuda = new javax.swing.JMenu();
         jmiSobre = new javax.swing.JMenuItem();
 
@@ -87,25 +88,18 @@ public class frmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jmArquivo);
 
-        jmConsultar.setText("Consultar");
+        jMenu5.setText("Produtos");
+        jMenu5.setActionCommand("");
 
-        jmiConsultaUsuario.setText("Usuário");
-        jmiConsultaUsuario.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem3.setText("Listar");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiConsultaUsuarioActionPerformed(evt);
+                jMenuItem3ActionPerformed(evt);
             }
         });
-        jmConsultar.add(jmiConsultaUsuario);
+        jMenu5.add(jMenuItem3);
 
-        Produto.setText("Produto");
-        Produto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProdutoActionPerformed(evt);
-            }
-        });
-        jmConsultar.add(Produto);
-
-        jMenuBar1.add(jmConsultar);
+        jMenuBar1.add(jMenu5);
 
         jMenu2.setText("Cadastrar");
 
@@ -135,8 +129,25 @@ public class frmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jmRelatorios.setText("Relatórios");
-        jMenuBar1.add(jmRelatorios);
+        jmConsultar.setText("Consultar");
+
+        jmiConsultaUsuario.setText("Usuário");
+        jmiConsultaUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiConsultaUsuarioActionPerformed(evt);
+            }
+        });
+        jmConsultar.add(jmiConsultaUsuario);
+
+        Produto.setText("Produto");
+        Produto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProdutoActionPerformed(evt);
+            }
+        });
+        jmConsultar.add(Produto);
+
+        jMenuBar1.add(jmConsultar);
 
         jmAjuda.setText("Ajuda");
 
@@ -234,6 +245,12 @@ public class frmMenu extends javax.swing.JFrame {
         cp.setLocationRelativeTo(null);
     }//GEN-LAST:event_ProdutoActionPerformed
 
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        ListaProdutos lp = new ListaProdutos();
+        lp.setVisible(true);
+        lp.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -276,15 +293,16 @@ public class frmMenu extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenu jmAjuda;
     private javax.swing.JMenu jmArquivo;
     private javax.swing.JMenu jmConsultar;
-    private javax.swing.JMenu jmRelatorios;
     private javax.swing.JMenuItem jmiCadCliente;
     private javax.swing.JMenuItem jmiCadUsuario;
     private javax.swing.JMenuItem jmiConsultaUsuario;
