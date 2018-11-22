@@ -45,7 +45,6 @@ public class frmMenu extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jmiCadUsuario = new javax.swing.JMenuItem();
-        jmiCadCliente = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jmConsultar = new javax.swing.JMenu();
         jmiConsultaUsuario = new javax.swing.JMenuItem();
@@ -110,14 +109,6 @@ public class frmMenu extends javax.swing.JFrame {
             }
         });
         jMenu2.add(jmiCadUsuario);
-
-        jmiCadCliente.setText("Cliente");
-        jmiCadCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiCadClienteActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jmiCadCliente);
 
         jMenuItem2.setText("Produtos");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -219,12 +210,6 @@ public class frmMenu extends javax.swing.JFrame {
         frmCU.setLocationRelativeTo(null);
     }//GEN-LAST:event_jmiCadUsuarioActionPerformed
 
-    private void jmiCadClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCadClienteActionPerformed
-        frmCadastroCliente frmCC = new frmCadastroCliente();
-        frmCC.setVisible(true);
-        frmCC.setLocationRelativeTo(null);
-    }//GEN-LAST:event_jmiCadClienteActionPerformed
-
     private void jmiConsultaUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiConsultaUsuarioActionPerformed
           ConsultaUsuario cu = new ConsultaUsuario();
           cu.setVisible(true);
@@ -303,7 +288,6 @@ public class frmMenu extends javax.swing.JFrame {
     private javax.swing.JMenu jmAjuda;
     private javax.swing.JMenu jmArquivo;
     private javax.swing.JMenu jmConsultar;
-    private javax.swing.JMenuItem jmiCadCliente;
     private javax.swing.JMenuItem jmiCadUsuario;
     private javax.swing.JMenuItem jmiConsultaUsuario;
     private javax.swing.JMenuItem jmiSair;

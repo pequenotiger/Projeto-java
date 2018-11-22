@@ -52,5 +52,5 @@ Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE.m
 
 ## Agradecimentos
 
-* Prof. Erika Lopes
+* Prof. Erica Lopes
 
