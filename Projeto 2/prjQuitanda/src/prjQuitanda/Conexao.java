@@ -16,7 +16,7 @@ public class Conexao {
 
            //jdbc - e o driver da sun responsavel pela conexao
            //estabelece uma conexao 
-           con = DriverManager.getConnection("jdbc:mysql://localhost/bdCallmargo","root","");
+           con = DriverManager.getConnection("jdbc:mysql://localhost/quitanda","root","");
 
            //System.out.println("Conexão realizada com sucesso.");
          }

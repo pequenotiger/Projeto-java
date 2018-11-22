@@ -43,10 +43,6 @@
                       </Group>
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="btCadastroFunc" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
                           <Component id="txtEmail" alignment="1" max="32767" attributes="0"/>
                           <Component id="tpConSenha" alignment="0" max="32767" attributes="0"/>
                           <Component id="tpSenha" alignment="0" max="32767" attributes="0"/>
@@ -56,19 +52,20 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="txtPesquisa" max="32767" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="btPesquisa" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lbPesquisaNome" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbPesquisaEmail" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbPesquisaCódigo" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lbPesquisaNome" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbPesquisaEmail" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbPesquisaCódigo" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
+                      <Component id="btCadastroFunc" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -98,16 +95,11 @@
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tpConSenha" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="29" max="32767" attributes="0"/>
-              <Component id="btCadastroFunc" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtPesquisa" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btPesquisa" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+              <EmptySpace pref="13" max="32767" attributes="0"/>
               <Component id="lbPesquisaCódigo" min="-2" pref="19" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
+              <Component id="btCadastroFunc" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               <Component id="lbPesquisaNome" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="lbPesquisaEmail" min="-2" max="-2" attributes="0"/>
@@ -175,16 +167,6 @@
       </Events>
     </Component>
     <Component class="javax.swing.JPasswordField" name="tpConSenha">
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtPesquisa">
-    </Component>
-    <Component class="javax.swing.JButton" name="btPesquisa">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Pesquisar"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btPesquisaActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lbPesquisaC&#xf3;digo">
     </Component>

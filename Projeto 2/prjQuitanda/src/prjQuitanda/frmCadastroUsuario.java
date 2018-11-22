@@ -40,8 +40,6 @@ public class frmCadastroUsuario extends javax.swing.JFrame {
         btCadastroFunc = new javax.swing.JButton();
         tpSenha = new javax.swing.JPasswordField();
         tpConSenha = new javax.swing.JPasswordField();
-        txtPesquisa = new javax.swing.JTextField();
-        btPesquisa = new javax.swing.JButton();
         lbPesquisaCódigo = new javax.swing.JLabel();
         lbPesquisaNome = new javax.swing.JLabel();
         lbPesquisaEmail = new javax.swing.JLabel();
@@ -76,13 +74,6 @@ public class frmCadastroUsuario extends javax.swing.JFrame {
             }
         });
 
-        btPesquisa.setText("Pesquisar");
-        btPesquisa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btPesquisaActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -104,26 +95,22 @@ public class frmCadastroUsuario extends javax.swing.JFrame {
                             .addComponent(jLabel2))
                         .addGap(23, 23, 23)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btCadastroFunc)
-                                .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(txtEmail, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(tpConSenha)
                             .addComponent(tpSenha)
                             .addComponent(txtUsuario))))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtPesquisa)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btPesquisa)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbPesquisaNome)
-                    .addComponent(lbPesquisaEmail)
-                    .addComponent(lbPesquisaCódigo, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbPesquisaNome)
+                            .addComponent(lbPesquisaEmail)
+                            .addComponent(lbPesquisaCódigo, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(153, 153, 153)
+                        .addComponent(btCadastroFunc)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -146,15 +133,11 @@ public class frmCadastroUsuario extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(tpConSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addComponent(btCadastroFunc)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPesquisa))
-                .addGap(13, 13, 13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addComponent(lbPesquisaCódigo, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btCadastroFunc)
+                .addGap(15, 15, 15)
                 .addComponent(lbPesquisaNome)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbPesquisaEmail)
@@ -193,37 +176,6 @@ public class frmCadastroUsuario extends javax.swing.JFrame {
         
     }//GEN-LAST:event_tpSenhaActionPerformed
 
-    private void btPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPesquisaActionPerformed
-        
-   Statement meustate;
-   
-   
-   ResultSet resultset;
-
-   
-   Conexao conex = new Conexao();     
-
-     String sql = "select * from tbUsuario WHERE nome = '"+txtPesquisa.getText()+"'";
-          
-          conex.conectar();      
-          
-          try{                         
-             meustate = Conexao.con.createStatement();
-             resultset = meustate.executeQuery(sql);
-             
-             while(resultset.next()){
-                lbPesquisaCódigo.setText("Código: "+resultset.getString(1));
-                lbPesquisaNome.setText("Usuário: "+resultset.getString(2));
-                lbPesquisaEmail.setText("E-mail: "+resultset.getString(3));
-             }                         
-          }
-          catch(SQLException erro){
-            //System.out.println("Nao foi possível realizar a consulta");
-          }     
-          
-          conex.desconectar();        
-    }//GEN-LAST:event_btPesquisaActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -261,7 +213,6 @@ public class frmCadastroUsuario extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btCadastroFunc;
-    private javax.swing.JButton btPesquisa;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -273,7 +224,6 @@ public class frmCadastroUsuario extends javax.swing.JFrame {
     private javax.swing.JPasswordField tpConSenha;
     private javax.swing.JPasswordField tpSenha;
     private javax.swing.JTextField txtEmail;
-    private javax.swing.JTextField txtPesquisa;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }
